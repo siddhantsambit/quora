@@ -8,8 +8,100 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>socialqaapp-api</artifactId>
+	<dependencies>
+   <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-web</artifactId>
+   </dependency>
+   <dependency>
+       <groupId>io.swagger</groupId>
+       <artifactId>swagger-annotations</artifactId>
+       <version>1.5.18</version>
+   </dependency>
+</dependencies>
+<build>
+    <pluginManagement>
+    <plugins>
+        <plugin>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-codegen-maven-plugin</artifactId>
+            <version>2.3.1</version>
+            <configuration>
+                <output>${project.build.directory}/generated-sources</output>
+                <language>spring</language>
+                <library>spring-boot</library>
+                <generateApis>false</generateApis>
+                <generateModels>true</generateModels>
+                <modelPackage>com.upgrad.socialqaapp.api.model</modelPackage>
+             	 <configOptions>
+                    <java8>true</java8>
+                    <sourceFolder>.</sourceFolder>
+                    <dateLibrary>java8</dateLibrary>
+                </configOptions> 
+            </configuration>
+        </plugin>
+        <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+        <plugin>
+        	<groupId>org.eclipse.m2e</groupId>
+        	<artifactId>lifecycle-mapping</artifactId>
+        	<version>1.0.0</version>
+        	<configuration>
+        		<lifecycleMappingMetadata>
+        			<pluginExecutions>
+        				<pluginExecution>
+        					<pluginExecutionFilter>
+        						<groupId>io.swagger</groupId>
+        						<artifactId>
+        							swagger-codegen-maven-plugin
+        						</artifactId>
+        						<versionRange>[2.3.1,)</versionRange>
+        						<goals>
+        							<goal>generate</goal>
+        						</goals>
+        					</pluginExecutionFilter>
+        					<action>
+        						<ignore></ignore>
+        					</action>
+        				</pluginExecution>
+        			</pluginExecutions>
+        		</lifecycleMappingMetadata>
+        	</configuration>
+        </plugin>
+    </plugins>
+    </pluginManagement>
 
-
+        <plugins>
+            <plugin>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.swagger</groupId>
+                        <artifactId>swagger-annotations</artifactId>
+                        <version>1.5.18</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>io.swagger</groupId>
+                        <artifactId>swagger-codegen-generators</artifactId>
+                        <version>1.0.0-rc0</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>signup</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>
+                                ${project.basedir}/src/main/resources/endpoints/signup.json
+                            </inputSpec>
+                            <language>spring</language>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
