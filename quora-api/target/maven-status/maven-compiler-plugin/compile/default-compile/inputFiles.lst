@@ -2,6 +2,7 @@
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./com/upgrad/quora/api/model/AnswerResponse.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./com/upgrad/quora/api/model/QuestionRequest.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./com/upgrad/quora/api/model/AnswerRequest.java
+/Users/sambit/Personal/quora/quora-api/src/main/java/com/upgrad/quora/api/controller/AnswerController.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./io/swagger/configuration/HomeController.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./io/swagger/api/ApiOriginFilter.java
 /Users/sambit/Personal/quora/quora-api/src/main/java/com/upgrad/quora/api/config/SwaggerConfiguration.java
@@ -29,5 +30,6 @@
 /Users/sambit/Personal/quora/quora-api/src/main/java/com/upgrad/quora/api/controller/CommonController.java
 /Users/sambit/Personal/quora/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./io/swagger/api/NotFoundException.java
+/Users/sambit/Personal/quora/quora-api/src/main/java/com/upgrad/quora/api/controller/QuestionController.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./com/upgrad/quora/api/model/AnswerEditResponse.java
 /Users/sambit/Personal/quora/quora-api/target/generated-sources/./com/upgrad/quora/api/model/ErrorResponse.java
