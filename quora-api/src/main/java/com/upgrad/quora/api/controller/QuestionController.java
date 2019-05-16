@@ -60,7 +60,7 @@ public class QuestionController
         {
              questionResponse = new QuestionResponse()
                     .id(questionUUID)
-                    .message("QUESTION CREATED");
+                    .status("QUESTION CREATED");
         }
 
         return new ResponseEntity<QuestionResponse>(questionResponse, HttpStatus.CREATED);
@@ -80,7 +80,7 @@ public class QuestionController
         if(questions.size() > 0 )
         {
             questionResponse = new QuestionResponse()
-                    .message(questions.toString());
+                    .status(questions.toString());
         }
 
         return new ResponseEntity<QuestionResponse>(questionResponse ,HttpStatus.OK);
@@ -113,7 +113,7 @@ public class QuestionController
         {
           questionResponse =  new QuestionResponse()
                     .id(uuid)
-                    .message("QUESTION EDITED");
+                    .status("QUESTION EDITED");
         }
         return new ResponseEntity<QuestionResponse>(questionResponse ,HttpStatus.OK);
     }
@@ -136,7 +136,7 @@ public class QuestionController
         {
             questionResponse =  new QuestionResponse()
                     .id(uuid)
-                    .message("QUESTION DELETED");
+                    .status("QUESTION DELETED");
         }
         return new ResponseEntity<QuestionResponse>(questionResponse ,HttpStatus.OK);
 
