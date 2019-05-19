@@ -1,7 +1,7 @@
 package com.upgrad.quora.service.business;
 
 import com.upgrad.quora.service.dao.AnswerDao;
-import com.upgrad.quora.service.dao.QuestionsDao;
+import com.upgrad.quora.service.dao.QuestionDao;
 import com.upgrad.quora.service.dao.UserDao;
 import com.upgrad.quora.service.entity.AnswerEntity;
 import com.upgrad.quora.service.entity.QuestionEntity;
@@ -23,7 +23,7 @@ public class GetAllAnswersToQuestionBusinessService {
     private UserDao userDao;
 
     @Autowired
-    private QuestionsDao questionDao;
+    private QuestionDao questionDao;
 
     @Autowired
     private AnswerDao answerDao;
@@ -42,7 +42,7 @@ public class GetAllAnswersToQuestionBusinessService {
     //Returns question based on questionId if exists
     @Transactional(propagation = Propagation.REQUIRED)
     public QuestionEntity verifyQuestionId(final String questionUuid)throws InvalidQuestionException {
-        QuestionEntity questionEntity= questionDao.getUserIdFromQuestionId(questionUuid);
+        QuestionEntity questionEntity= questionDao.getQuestionByQUuid(questionUuid);
         if(questionEntity == null) {
             throw new InvalidQuestionException("QUES-001","The question with entered uuid whose details are to be seen does not exist");
         } else {
