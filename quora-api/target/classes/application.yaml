@@ -4,9 +4,8 @@ server:
     contextPath: /api
 
 spring:
-
   application:
-    name: quora-api
+    name: proman-api
 
   datasource:
     driverClassName: org.postgresql.Driver
@@ -19,4 +18,5 @@ spring:
       hibernate:
         temp:
           use_jdbc_metadata_defaults: false
-    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+        database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+

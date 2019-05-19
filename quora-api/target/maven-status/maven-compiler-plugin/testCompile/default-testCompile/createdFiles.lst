@@ -1,0 +1,5 @@
+com\upgrad\quora\api\controller\QuestionControllerTest.class
+com\upgrad\quora\api\controller\UserControllerTest.class
+com\upgrad\quora\api\controller\AdminControllerTest.class
+com\upgrad\quora\api\controller\CommonControllerTest.class
+com\upgrad\quora\api\controller\AnswerControllerTest.class
